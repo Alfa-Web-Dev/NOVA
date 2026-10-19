@@ -1,0 +1,8 @@
+{
+  "appId": "app.nova.ai",
+  "appName": "Nova",
+  "webDir": "dist",
+  "backgroundColor": "#000000",
+  "server": { "androidScheme": "https" },
+  "android": { "allowMixedContent": false }
+}

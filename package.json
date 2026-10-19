@@ -1,0 +1,36 @@
+{
+  "name": "nova-ai",
+  "version": "1.5.0",
+  "description": "Nova \u2014 a free, open-source, privacy-first AI research assistant (PWA + Android). No paid APIs.",
+  "private": true,
+  "type": "module",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vite",
+    "icons": "node scripts/make-icons.mjs",
+    "build": "vite build && node scripts/postbuild.mjs",
+    "preview": "vite preview",
+    "test": "node --test tests/*.test.js",
+    "android:sync": "npm run build && npx cap sync android",
+    "android:patch": "node scripts/android-patch.mjs"
+  },
+  "dependencies": {
+    "@capacitor-community/speech-recognition": "^7.0.0",
+    "@capacitor/browser": "^7.0.0",
+    "@capacitor/core": "^7.0.0",
+    "@mlc-ai/web-llm": "^0.2.75",
+    "dompurify": "^3.2.3",
+    "marked": "^15.0.4",
+    "pdfjs-dist": "^4.10.38",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "tesseract.js": "^5.1.1"
+  },
+  "devDependencies": {
+    "@capacitor/android": "^7.0.0",
+    "@capacitor/cli": "^7.0.0",
+    "@vitejs/plugin-react": "^4.3.4",
+    "sharp": "^0.33.5",
+    "vite": "^6.0.5"
+  }
+}
